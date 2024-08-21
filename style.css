@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  padding: 6vw;
+  background-color: hsl(0, 0%, 98%);
+}
+
+#heading {
+  text-align: center;
+  margin: 1rem 0;
+  width: calc(13rem + 17vw);
+  margin: 0 auto;
+}
+
+#heading #headers {
+  padding: 1rem 0;
+  font-size: clamp(0.86rem, 0.6rem + 1vw, 2rem);
+  color: hsl(234, 12%, 34%);
+}
+
+#heading p {
+  font-weight: 300;
+  font-size: clamp(0.7rem, 0.1rem + 1vw, 2rem);
+  /* font-size: 0.8rem; */
+  color: hsl(234, 12%, 34%);
+}
+
+#heading #headers h1:first-of-type {
+  font-weight: 300;
+}
+
+#heading #headers h1:last-of-type {
+  font-weight: 600;
+}
+
+#card-feature-section-parent {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, auto));
+  justify-content: center;
+  gap: 2rem;
+}
+
+#card-feature-section-parent p {
+  line-height: 1.6;
+}
+
+.card-feature-section {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 0.7rem hsl(229, 6%, 66%);
+  color: hsl(234, 12%, 34%);
+  height: 13.5rem;
+  position: relative;
+}
+
+.card-feature-section h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-feature-section p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.card-feature-section img {
+  width: 3rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+#supervisor {
+  border-top: 0.2rem solid hsl(180, 62%, 55%);
+}
+
+#team-builder {
+  border-top: 0.2rem solid hsl(0, 78%, 62%);
+}
+
+#karma {
+  border-top: 0.2rem solid hsl(34, 97%, 64%);
+}
+
+#calculator {
+  border-top: 0.2rem solid hsl(212, 86%, 64%);
+}
+
+@media (min-width: 48rem) {
+  #card-feature-section-parent {
+    margin: 2rem auto;
+    width: calc(28rem + 30vw);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "supervisor team-builder calculator"
+      "supervisor karma calculator";
+  }
+
+  #supervisor {
+    grid-area: supervisor;
+    align-self: center;
+  }
+
+  #team-builder {
+    grid-area: team-builder;
+  }
+
+  #karma {
+    grid-area: karma;
+  }
+
+  #calculator {
+    grid-area: calculator;
+    align-self: center;
+  }
+}
